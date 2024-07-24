@@ -10,15 +10,19 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #153677, #4e085f);
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .task-app {
   width: 100%;
   max-width: 540px;
   background: white;
-  margin: 100px auto 20px;
+  margin: 20px auto;
   padding: 40px 30px 70px;
   border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .task-app h2 {
@@ -103,9 +107,95 @@ ul li span {
   color: #ff45e6;
   line-height: 40px;
   text-align: center;
-  border: 50%;
+  border-radius: 50%;
 }
 
 ul li span:hover {
   background: #edeef0;
+}
+
+/* Responsive Styles */
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .task-app {
+    padding: 50px 40px 80px;
+  }
+
+  button {
+    padding: 20px 60px;
+    font-size: 18px;
+  }
+
+  input {
+    padding: 12px;
+  }
+
+  ul li {
+    font-size: 18px;
+    padding: 14px 8px 14px 60px;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .task-app {
+    padding: 40px 30px 70px;
+  }
+
+  button {
+    padding: 16px 50px;
+    font-size: 16px;
+  }
+
+  input {
+    padding: 10px;
+  }
+
+  ul li {
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+  }
+}
+
+/* Small screens (mobile landscape) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .task-app {
+    padding: 30px 20px 50px;
+  }
+
+  button {
+    padding: 14px 40px;
+    font-size: 14px;
+  }
+
+  input {
+    padding: 8px;
+  }
+
+  ul li {
+    font-size: 15px;
+    padding: 10px 8px 10px 40px;
+  }
+}
+
+/* Extra small screens (mobile portrait) */
+@media (max-width: 479px) {
+  .task-app {
+    padding: 20px 15px 40px;
+  }
+
+  button {
+    padding: 12px 30px;
+    font-size: 12px;
+  }
+
+  input {
+    padding: 6px;
+  }
+
+  ul li {
+    font-size: 13px;
+    padding: 8px 8px 8px 35px;
+  }
 }
